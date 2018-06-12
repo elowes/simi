@@ -1,7 +1,7 @@
 # simi
 common methods collection 4 JavaScript.
 
-[![Build Status](https://travis-ci.org/elowes/simi.svg?branch=master)](https://travis-ci.org/elowes/simi)
+[![Build Status](https://travis-ci.com/elowes/simi.svg?branch=master)](https://travis-ci.com/elowes/simi)
 [![codecov](https://codecov.io/gh/elowes/simi/branch/master/graph/badge.svg)](https://codecov.io/gh/elowes/simi)
 ![npm](https://img.shields.io/npm/dt/simi.svg)
 

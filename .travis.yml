@@ -14,8 +14,8 @@ script:
 after_success:
   - codecov
 
-deploy:
-  skip_cleanup: true,
-  provider: npm
-  email: "cadenho@hotmail.com"
-  api_key: $npmtoken
+# deploy:
+#   skip_cleanup: true,
+#   provider: npm
+#   email: "cadenho@hotmail.com"
+#   api_key: $npmtoken
