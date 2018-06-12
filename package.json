@@ -1,6 +1,6 @@
 {
   "name": "simi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "common methods collection 4 javascript",
   "main": "./lib/index.js",
   "types": "./src/index.d.ts",
