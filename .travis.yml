@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - 8
+
+before_install:
+  - npm install
+
+script:
+  - npm install codecov -g
+  - npm run test
+  - npm run build
+
+after_success:
+  - codecov
+
+deploy:
+  skip_cleanup: true,
+  provider: npm
+  email: "cadenho@hotmail.com"
+  api_key: $npmtoken

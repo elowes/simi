@@ -1,0 +1,14 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "compilerOptions": {
+        "target": "es5",
+        "outDir": "lib/",
+        "module": "commonjs",
+        "removeComments": true
+    },
+    "exclude": [
+        "**/__test__/"
+    ]
+}
