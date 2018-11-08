@@ -1,11 +1,15 @@
 {
   "name": "simi",
-  "version": "1.0.1",
-  "description": "common methods collection 4 javascript",
+  "version": "1.1.0",
+  "description": "common methods collection for javascript",
   "main": "./lib/index.js",
-  "types": "./src/index.d.ts",
   "scripts": {
-    "build": "tsc && webpack",
+    "prepublish": "npm run build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
     "test": "jest --coverage"
   },
   "repository": {
@@ -22,14 +26,20 @@
   },
   "homepage": "https://github.com/elowes/simi#readme",
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "jest": "^22.4.3",
-    "jest-environment-jsdom": "^22.4.3",
-    "ts-jest": "^22.4.5",
-    "tslint": "^5.10.0",
-    "typescript": "^2.7.2",
-    "webpack": "^4.7.0",
-    "webpack-cli": "^3.0.3"
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.9",
+    "jest": "^23.6.0",
+    "jest-environment-jsdom": "^23.4.0",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
   },
   "jest": {
     "testEnvironment": "./environment.js",
@@ -45,5 +55,8 @@
       "json",
       "node"
     ]
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0"
   }
 }

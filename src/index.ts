@@ -7,30 +7,34 @@ import deepClone from "./deepClone";
 import hash from "./hash";
 import type from "./type";
 
-declare var window:any;
+declare global {
+  interface Window {
+    simi: object
+  }
+}
 
 const simi = {
-    md5,
-    getCookie,
-    uuid,
-    debounce,
-    throttle,
-    deepClone,
-    hash,
-    type
+  md5,
+  getCookie,
+  uuid,
+  debounce,
+  throttle,
+  deepClone,
+  hash,
+  type
 }
 
 export default simi;
 
 export {
-    md5,
-    getCookie,
-    uuid,
-    debounce,
-    throttle,
-    deepClone,
-    hash,
-    type
+  md5,
+  getCookie,
+  uuid,
+  debounce,
+  throttle,
+  deepClone,
+  hash,
+  type
 }
 
 window.simi = simi

@@ -5,7 +5,7 @@
  */
 const deepClone = function (object: object): object {
   try {
-    let copy = JSON.stringify(object);
+    const copy = JSON.stringify(object);
     return JSON.parse(copy);
   } catch (error) {
     throw new TypeError("arguments is not object");

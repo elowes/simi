@@ -1,4 +1,4 @@
-import type from '../index'
+import type from '../src/type'
 
 it('test null', () => {
   expect(type(null)).toBe('null')

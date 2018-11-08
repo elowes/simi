@@ -4,13 +4,14 @@
  * @param name cookie name cookie 名称
  */
 const getCookie = function (name: string): string | null {
-    let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-    let arr = document.cookie.match(reg);
+  let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+  let arr = document.cookie.match(reg);
 
-    if (document.cookie.match(reg))
-        return decodeURI(arr[2]);
-    else
-        return null;
+  if (arr && arr.length > 0) {
+    return decodeURI(arr[2]);
+  } else {
+    return null;
+  }
 }
 
 export default getCookie;
