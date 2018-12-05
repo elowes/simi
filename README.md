@@ -1,6 +1,8 @@
-# simi
-common methods collection 4 JavaScript.
+# Simi
 
+Commonly used JavaScript method library.
+
+[![npm](https://img.shields.io/npm/v/simi.svg)](https://www.npmjs.com/package/simi)
 [![Build Status](https://travis-ci.com/elowes/simi.svg?branch=master)](https://travis-ci.com/elowes/simi)
 [![codecov](https://codecov.io/gh/elowes/simi/branch/master/graph/badge.svg)](https://codecov.io/gh/elowes/simi)
 ![npm](https://img.shields.io/npm/dt/simi.svg)
@@ -15,11 +17,10 @@ common methods collection 4 JavaScript.
 - `deepClone(object)` object deepclone
 - `type(variable)` judge variable type
 
-## How To Use
+## Installation
 
 ``` shell
-npm / cnpm install simi --save 
-yarn add simi
+npm i simi --save 
 ```
 
 ``` js
@@ -30,13 +31,15 @@ simi.isAlpha()
 ```
 or
 ``` js
-import { md5, isAlpha } from "simi"
-md5("simi")
-isAlpha()
+import { md5 } from 'simi'
+md5('simi')
 ```
 
-## If you only use the few methods in simi, it is recommended to use the following writing method, which will make the packaged JS file smaller
+## Tips
+
+🤡If you only use the few methods in simi, it is recommended to use the following writing method, which will make the packaged JS file smaller.
+
 ``` js
-import md5 from "simi/lib/md5"
-md5("simi")
+import md5 from 'simi/lib/md5'
+md5('simi')
 ```
